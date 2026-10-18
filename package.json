@@ -1,0 +1,31 @@
+{
+  "name": "manual-rag-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for RAG-based search over reference manuals (PDF → chunks → Ollama embeddings → cosine search)",
+  "type": "module",
+  "main": "build/index.js",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "rag",
+    "ollama",
+    "embeddings",
+    "manuals",
+    "pdf"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "ingest": "node build/ingest.js",
+    "import": "node --max-old-space-size=2048 build/import.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ollama": "^0.5.11",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

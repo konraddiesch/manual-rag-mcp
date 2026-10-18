@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "manual-rag": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${HOME}/Code/manual-rag-mcp/build/index.js"]
+    }
+  }
+}
