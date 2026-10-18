@@ -49,6 +49,7 @@ something source-specific, generalize it.
 
 ## Key facts
 
+- **Source PDFs** are archived locally at `~/Code/manuals/` (`live12-manual-en.pdf`, `resolve_manual.pdf`, `Melodyne 5 assistant Reference Manual, Stand-alone, English.pdf`) — the repo itself ships no manuals. Re-ingest from there, e.g. `npm run ingest -- --pdf ~/Code/manuals/resolve_manual.pdf --source resolve --replace`.
 - **All MCP-server logging goes to `stderr`** (stdout is reserved for JSON-RPC). Never `console.log` in `index.ts` / `vectorstore.ts` / `embeddings.ts` / `store.ts`. The CLIs (`ingest.ts`, `import.ts`) may use `console.log`.
 - **No API key, fully local** — embeddings via Ollama (`nomic-embed-text`); search is brute-force cosine similarity in `vectorstore.ts`.
 - **Requirements**: Node ≥ 20, Ollama running + `nomic-embed-text` pulled, `pdftotext` (poppler) for `ingest`.

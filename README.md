@@ -4,7 +4,7 @@ Feed any manual / book / text into your RAG, then use it as an MCP server so you
 
 An [MCP](https://modelcontextprotocol.io) server that exposes retrieval-augmented search over an **arbitrary set of reference manuals**. Ingestion turns a PDF into text chunks and embeds them locally with [Ollama](https://ollama.com) (`nomic-embed-text`); search runs a brute-force cosine similarity over those embeddings — no cloud, no API keys, fully local. Any number of sources can be added, each with an arbitrary name, and existing embedding stores from other RAG projects can be imported without re-embedding.
 
-*Currently indexed as examples: the Ableton Live 12 and DaVinci Resolve manuals.*
+*Any manual works — the indexed sources are discovered at runtime via `get_sources`.*
 
 ## How it works
 
